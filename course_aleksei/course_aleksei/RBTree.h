@@ -101,7 +101,7 @@ namespace Aleksei {
 		};
 		Node* nil = new Node();
 
-		size_t last_comparison_amount;
+		size_t last_comparison_amount = 0;
 		Node* root;
 
 		/**

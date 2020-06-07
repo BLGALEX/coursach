@@ -148,8 +148,8 @@ public:
 	void Delete(T data) {
 		elem* temp = head;
 		elem* buffer;
-		i = 0;
-		size = this->get_size();
+		int i = 0;
+		int size = this->get_size();
 		if (size == 1 && temp->get_data() == data) {
 			delete temp;
 			head = NULL;
@@ -199,7 +199,7 @@ public:
 			}
 	}
 	 
-	T* Find(T t) {
+	/*T* Find(T t) {
 		elem* temp = head; 
 		i = 0;
 		while (i < this->get_size()) {
@@ -207,5 +207,5 @@ public:
 			if(temp->get_data()==t)
 				return    
 		}
-	}
+	}*/
 };

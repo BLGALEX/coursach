@@ -1,15 +1,10 @@
 #include"RBTree.h"
+#include"HT.h"
 
-class nums {
-public:
-	
 
-private: 
-};
 
 int main() {
 
 	Aleksei::RedBlackTree<int> Tree;
-
 	return 0;
 }
