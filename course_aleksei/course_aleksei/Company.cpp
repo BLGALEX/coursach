@@ -8,6 +8,7 @@ Vector<std::string> Company::GetServices() const {
 	return services;
 }
 
+
 std::string Company::GetAdress() const {
 	return adress;
 }

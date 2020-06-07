@@ -2,10 +2,9 @@
 
 #include<iostream>
 #include<conio.h>
-
+#include"Company.h"
 // ЋепЄха ј.ј. Ѕ8118-09.03.04прогин(2)
 
-template<typename T>
 class MyList {
 	/**
 	 * Ёлемент списка, содержит целочисленное значение и указатель на следующий элемент
@@ -13,7 +12,7 @@ class MyList {
 private:
 	class elem {
 	private:
-		T data;
+		Company data;
 		elem* next;
 	public:
 		/**
@@ -21,26 +20,26 @@ private:
 		 * @param data - число, которое будет хранитьс€ в узле.
 		 * @param next - указатель на следующий узел.
 		 */
-		elem(T data, elem* next = NULL) {
+		elem(Company data, elem* next = NULL) {
 			this->data = data;
 			this->next = next;
 		}
 		/**
 		 * @return число, которое содержит данный элемент.
 		 */
-		T get_data() {
+		Company get_data() const{
 			return this->data;
 		}
 		/**
 		 * @param _data - число, которое будет хранитьс€ в данном элементе.
 		 */
-		void set_data(T _data) {
+		void set_data(Company _data) {
 			this->data = _data;
 		}
 		/**
 		 * @return - указатель на следующий элемент списка.
 		 */
-		elem* getPointer() {
+		elem* getPointer() const {
 			return this->next;
 		}
 		/**
@@ -50,11 +49,15 @@ private:
 			this->next = _next;
 		}
 
+		Company* GetDataPointer() {
+			return &data;
+		}
 	};
 	/**
 	 * указатель на первый элемент списка (голову).
 	 */
 	elem* head;
+	size_t last_comparison_amount;
 public:
 	/**
 	 *  онструктор списка. »значально список не должен иметь элементов,
@@ -84,7 +87,7 @@ public:
 	 *
 	 * @param _data - число которое будет хранить новый элемент.
 	 */
-	void push(T _data)
+	void push(Company _data)
 	{
 
 		/**
@@ -115,7 +118,7 @@ public:
 			elem* temp = head; //запоминаем ссылку на €чейку пам€ти головы
 			head = new elem(_data); // создаЄм новую голову со значением _data
 			head->setPointer(temp->getPointer()); //ссылаем голову на второй элемент списка
-			int a = temp->get_data(); // сохран€ем число из старой €чейки пам€ти головы
+			Company a = temp->get_data(); // сохран€ем число из старой €чейки пам€ти головы
 			temp->set_data(head->get_data()); //измен€ем значение, хран€щеес€ в старой €чейке пам€ти головы на _data
 			head->set_data(a); // записываем в новую голову значение старой
 			temp->setPointer(head); // ссылаем старую €чейку головы на новую голову
@@ -125,13 +128,13 @@ public:
 	/**
 	 * @return true, если список - пустой, иначе - false.
 	 */
-	bool isEmpty() {
+	bool isEmpty() const {
 		return head == NULL;
 	}
 	/**
 	 * @return текущее количество элементов списка.
 	 */
-	int get_size()
+	int get_size() const
 	{
 		if (isEmpty()) return 0;
 		else {
@@ -145,18 +148,18 @@ public:
 		}
 	}
 	
-	void Delete(T data) {
+	void Delete(Company data) {
 		elem* temp = head;
 		elem* buffer;
 		int i = 0;
 		int size = this->get_size();
-		if (size == 1 && temp->get_data() == data) {
+		if (size == 1 && (temp->get_data().GetName() == data.GetName())) {
 			delete temp;
 			head = NULL;
 		}
 		while (i < size) {
 			i++;
-			if (temp->get_data() == data) {
+			if (temp->get_data().GetName() == data.GetName()) {
 				buffer = temp->getPointer();
 				temp->set_data(buffer->get_data());
 				temp->setPointer(buffer->getPointer());
@@ -169,7 +172,7 @@ public:
 	 *”дал€ет заданный элемент
 	 * @param number - номер удал€емого элемента
 	 */
-	void DeleteByIndex(T number) {
+	void DeleteByIndex(int number) {
 		if (number < get_size()-1 && number>=0){  //если заданный элемент не последний
 			int i = 0;
 			elem* temp = head;
@@ -198,14 +201,34 @@ public:
 				delete buffer;
 			}
 	}
-	 
-	/*T* Find(T t) {
-		elem* temp = head; 
-		i = 0;
-		while (i < this->get_size()) {
-			i++;
-			if(temp->get_data()==t)
-				return    
+
+	Vector<Company> GetAllCompanies() const{
+		Vector<Company> v;
+		elem* temp = head;
+		if (get_size() != 0) {
+			do {
+				v.PushBack(temp->get_data());
+				temp = temp->getPointer();
+			} while (temp != head);
 		}
-	}*/
+		return v;
+	}
+	 
+	Company* Find(std::string name) {
+		elem* temp = head;
+		last_comparison_amount = 0;
+		int i = 0;
+		int size = this->get_size();
+		while (i < size) {
+			i++;
+			last_comparison_amount++;
+			if (temp->get_data().GetName() == name)
+				return temp->GetDataPointer();
+		}
+		return NULL;
+	}
+
+	size_t GetLastComparisonAmount() const {
+		return last_comparison_amount;
+	}
 };

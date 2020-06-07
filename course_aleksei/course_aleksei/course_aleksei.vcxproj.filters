@@ -41,10 +41,10 @@
     <ClCompile Include="Source.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Customer.cpp">
+    <ClCompile Include="Company.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="Company.cpp">
+    <ClCompile Include="Customer.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
   </ItemGroup>

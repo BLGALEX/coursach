@@ -5,7 +5,7 @@
 
 namespace Aleksei {
 
-	template <typename T>
+	template <typename Company>
 	class RedBlackTree {
 	public:
 
@@ -49,7 +49,7 @@ namespace Aleksei {
 	 *
 	 * @param - day - день, month - мес€ц
 	 */
-	void Insert(T t) //(T t)
+	void Insert(Company t) //(T t)
 	{
 
 		Node* z = new Node();
@@ -86,7 +86,7 @@ namespace Aleksei {
 
 	private:
 		struct Node {
-			T key;
+			Company key;
 			bool color;
 			Node* left;
 			Node* right;
