@@ -198,5 +198,14 @@ public:
 				delete buffer;
 			}
 	}
-
+	 
+	T* Find(T t) {
+		elem* temp = head; 
+		i = 0;
+		while (i < this->get_size()) {
+			i++;
+			if(temp->get_data()==t)
+				return    
+		}
+	}
 };
