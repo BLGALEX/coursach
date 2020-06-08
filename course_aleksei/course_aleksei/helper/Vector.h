@@ -1,7 +1,6 @@
 #pragma once
 
 #include <utility>
-
 template <typename T>
 class Vector {
 public:
@@ -99,13 +98,13 @@ public:
     T* Begin() noexcept {
         return _data;
     }
-    const T* Begin() const noexcept {
+    const T* begin() const noexcept {
         return _data;
     }
     T* End() noexcept {
         return _data + _size;
     }
-    const T* End() const noexcept {
+    const T* end() const noexcept {
         return _data + _size;
     }
 

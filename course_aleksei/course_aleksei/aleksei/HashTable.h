@@ -7,8 +7,8 @@
 namespace Aleksei {
 	class HashTable {
 	public:
-		HashTable();
-		~HashTable();
+		HashTable() noexcept;
+		~HashTable() noexcept;
 
 		HashTable(const HashTable&) = delete;
 
@@ -18,25 +18,29 @@ namespace Aleksei {
 		
 		HashTable& operator = (HashTable&&) = default;
 
-		void Insert(Company t);
+		void Insert(Company t) noexcept;
 
-		void Remove(const Company& t);
+		void Remove(const Company& t) noexcept;
 
-		Company* Find(const Company& t);
+		Company* Find(const Company& t) noexcept;
 
-		Vector<Pair<Company, size_t>> Lookup();
+		Vector<Pair<Company, size_t>> Lookup() const noexcept;
 
-		int Size() const;
+		size_t Capacity() const;
 
-		size_t GetLastComparisonAmount() const;
+		size_t LastComparisonsAmount() const;
+
+		Vector<Company> GetData() const;
 
 	private:
 
-		size_t N = 4;
-		MyList* table = new MyList[N];
-		size_t last_comparison_amount = 0;
-		size_t size = 0;
+		size_t N;
+		MyList* table;
+		size_t last_comparison_amount;
+		size_t size;
 
-		int Hash(std::string s);
+		int Hash(std::string s) const;
+
+		void ReHash();
 	};
 }

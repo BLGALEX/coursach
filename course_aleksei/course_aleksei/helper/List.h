@@ -71,15 +71,19 @@ public:
 	 * Деструктор списка. Узлы списка последовательно удаляются, начиная с head.
 	 */
 	~MyList() {
-		elem* temp = head;
-		elem* buffer = head;
-		while (temp->getPointer() != buffer){
-			head = (temp->getPointer());
-			delete temp;
-			temp = head;
+		if (head != NULL) {
+			elem* temp = head;
+			elem* buffer = head;
+			while (temp->getPointer() != buffer) {
+				head = (temp->getPointer());
+				delete temp;
+				temp = head;
+			}
+			head = NULL;
 		}
-		head = NULL;;
 	}
+
+
 	/**
 	 * Добавление элемента в конец списка.
 	 * 1) Если список пуст, то первым элементом становится голова.
