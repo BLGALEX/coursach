@@ -1,6 +1,6 @@
 #pragma once
 #include<string>
-#include "Vector.h"
+#include "../helper/Vector.h"
 
 class Company {
 public:

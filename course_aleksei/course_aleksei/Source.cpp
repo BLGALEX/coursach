@@ -1,6 +1,6 @@
-#include"RBTree.h"
-#include"HT.h"
-#include"Company.h" 
+#include"aleksei/RBTree.h"
+#include"aleksei/HashTable.h"
+#include"aleksei/Company.h" 
 #include<iostream>
 
 
@@ -8,9 +8,9 @@
 int main() {
 
 	Vector<std::string> services;
-	Company first("f", services, "f");
+	Company first("fвапро", services, "f");
 	services.PushBack("Polochka");
-	Company second("s", services, "s");
+	Company second("sап", services, "s");
 	services.PushBack("Palochka");
 	services[0] = "Polochka1";
 	Company third("t", services, "t");

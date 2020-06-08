@@ -139,18 +139,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Company.h" />
-    <ClInclude Include="Customer.h" />
-    <ClInclude Include="HT.h" />
-    <ClInclude Include="List.h" />
-    <ClInclude Include="Pair.h" />
-    <ClInclude Include="RBTree.h" />
-    <ClInclude Include="Vector.h" />
+    <ClCompile Include="aleksei\Company.cpp" />
+    <ClCompile Include="aleksei\Customer.cpp" />
+    <ClCompile Include="aleksei\HashTablecpp.cpp" />
+    <ClCompile Include="aleksei\RBTree.cpp" />
+    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Company.cpp" />
-    <ClCompile Include="Customer.cpp" />
-    <ClCompile Include="Source.cpp" />
+    <ClInclude Include="aleksei\Company.h" />
+    <ClInclude Include="aleksei\Customer.h" />
+    <ClInclude Include="aleksei\HashTable.h" />
+    <ClInclude Include="aleksei\RBTree.h" />
+    <ClInclude Include="helper\List.h" />
+    <ClInclude Include="helper\Pair.h" />
+    <ClInclude Include="helper\Vector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -2,7 +2,7 @@
 
 #include<iostream>
 #include<conio.h>
-#include"Company.h"
+#include"../aleksei/Company.h"
 // Лепёха А.А. Б8118-09.03.04прогин(2)
 
 class MyList {
@@ -63,8 +63,9 @@ public:
 	 * Конструктор списка. Изначально список не должен иметь элементов,
 	 * поэтому указатель на начало списка устанавливается нулевым.
 	 */
-	MyList() {
+	MyList(){
 		head = NULL;
+		last_comparison_amount = 0;
 	}
 	/**
 	 * Деструктор списка. Узлы списка последовательно удаляются, начиная с head.

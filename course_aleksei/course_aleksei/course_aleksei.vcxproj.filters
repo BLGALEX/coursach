@@ -5,47 +5,51 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="aleksei">
+      <UniqueIdentifier>{c21d5909-4fa0-4c48-8bd2-3eb1ca4f77ee}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="helper">
+      <UniqueIdentifier>{11d1535f-c576-4945-b48e-52effa28df20}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="RBTree.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Vector.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="HT.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Pair.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="List.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Company.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Customer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Company.cpp">
-      <Filter>Header Files</Filter>
+    <ClCompile Include="aleksei\Company.cpp">
+      <Filter>aleksei</Filter>
     </ClCompile>
-    <ClCompile Include="Customer.cpp">
-      <Filter>Header Files</Filter>
+    <ClCompile Include="aleksei\Customer.cpp">
+      <Filter>aleksei</Filter>
     </ClCompile>
+    <ClCompile Include="aleksei\HashTablecpp.cpp">
+      <Filter>aleksei</Filter>
+    </ClCompile>
+    <ClCompile Include="aleksei\RBTree.cpp">
+      <Filter>aleksei</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="aleksei\Company.h">
+      <Filter>aleksei</Filter>
+    </ClInclude>
+    <ClInclude Include="aleksei\Customer.h">
+      <Filter>aleksei</Filter>
+    </ClInclude>
+    <ClInclude Include="aleksei\HashTable.h">
+      <Filter>aleksei</Filter>
+    </ClInclude>
+    <ClInclude Include="aleksei\RBTree.h">
+      <Filter>aleksei</Filter>
+    </ClInclude>
+    <ClInclude Include="helper\List.h">
+      <Filter>helper</Filter>
+    </ClInclude>
+    <ClInclude Include="helper\Pair.h">
+      <Filter>helper</Filter>
+    </ClInclude>
+    <ClInclude Include="helper\Vector.h">
+      <Filter>helper</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,12 +1,12 @@
 #pragma once
 #include <functional>
 #include<utility>
-#include "Vector.h"
+#include "../helper/Vector.h"
 
 namespace Aleksei {
 
 	template <typename Company>
-	class RedBlackTree {
+	class RBTree {
 	public:
 
 		/**
@@ -16,19 +16,19 @@ namespace Aleksei {
 		 *
 		 * Конструктор дерева-> Изначально дерево пустое->
 		 */
-		RedBlackTree(){
+		RBTree(){
 			root = nil;
 		}
 
 		//~RedBlackTree();
 
-		RedBlackTree(const RedBlackTree&) = delete;
+		RBTree(const RBTree&) = delete;
 
-		RedBlackTree& operator=(const RedBlackTree&) = delete;
+		RBTree& operator=(const RBTree&) = delete;
 
-		RedBlackTree(RedBlackTree&&) = default;
+		RBTree(RBTree&&) = default;
 
-		RedBlackTree& operator=(RedBlackTree&&) = default;
+		RBTree& operator=(RBTree&&) = default;
 
 		//virtual void Insert(T t) = 0;
 
