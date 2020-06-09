@@ -7,7 +7,9 @@ HashTable::HashTable()noexcept {
 	size = 0;
 	last_comparison_amount = 0;
 }
-HashTable::~HashTable()noexcept {}
+HashTable::~HashTable()noexcept {
+
+}
 
 void HashTable::Insert(Company t)noexcept {
 	table[Hash(t.GetName())].push(t);
@@ -22,7 +24,7 @@ void HashTable::Remove(const Company & t)noexcept {
 	size = size - s + table[Hash(t.GetName())].get_size();
 }
 
-Company* HashTable::Find(const Company & t)noexcept {
+const Company* HashTable::Find(const Company & t)noexcept {
 	Company* result = table[Hash(t.GetName())].Find(t.GetName());
 	last_comparison_amount = table[Hash(t.GetName())].GetLastComparisonAmount();
 	return result;

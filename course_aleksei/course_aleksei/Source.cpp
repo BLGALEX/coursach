@@ -6,24 +6,27 @@
 
 
 int main() {
-
-	Vector<std::string> services;
-	Company first("fвапро", services, "f");
-	services.PushBack("Polochka");
-	Company second("sап", services, "s");
-	services.PushBack("Palochka");
-	services[0] = "Polochka1";
-	Company third("t", services, "t");
+	Customer test;
 	
-	Aleksei::HashTable HT;
-	HT.Insert(first);
-	HT.Insert(second);
-	HT.Insert(third);
+	while (true) {
+		Aleksei::RBTree tree;
+		for (int i = 0; i < 1000; i++) {
+			test.SetCompanyName(std::to_string(i));
+			test.SetName(std::to_string(i));
+			test.SetService(std::to_string(i));
+			test.SetVolume(i);
+			tree.Insert(test);
+		}
 
-	Pair<Company, size_t> pair;
-	Vector<Pair<Company, size_t>> v = HT.Lookup();
-	for (int i = 0; i < v.Size(); i++) {
-		pair = v[i];
+		for (int i = 0; i < 10; i++) {
+			test.SetCompanyName(std::to_string(i));
+			test.SetName(std::to_string(i));
+			test.SetService(std::to_string(i));
+			test.SetVolume(i);
+			tree.Remove(test.GetName());
+		}
 	}
+
+
 	return 0;
 }

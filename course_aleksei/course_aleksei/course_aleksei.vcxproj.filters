@@ -22,10 +22,10 @@
     <ClCompile Include="aleksei\Customer.cpp">
       <Filter>aleksei</Filter>
     </ClCompile>
-    <ClCompile Include="aleksei\HashTablecpp.cpp">
+    <ClCompile Include="aleksei\RBTree.cpp">
       <Filter>aleksei</Filter>
     </ClCompile>
-    <ClCompile Include="aleksei\RBTree.cpp">
+    <ClCompile Include="aleksei\HashTable.cpp">
       <Filter>aleksei</Filter>
     </ClCompile>
   </ItemGroup>

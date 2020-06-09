@@ -141,7 +141,7 @@
   <ItemGroup>
     <ClCompile Include="aleksei\Company.cpp" />
     <ClCompile Include="aleksei\Customer.cpp" />
-    <ClCompile Include="aleksei\HashTablecpp.cpp" />
+    <ClCompile Include="aleksei\HashTable.cpp" />
     <ClCompile Include="aleksei\RBTree.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>

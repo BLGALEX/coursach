@@ -22,7 +22,7 @@ namespace Aleksei {
 
 		void Remove(const Company& t) noexcept;
 
-		Company* Find(const Company& t) noexcept;
+		const Company* Find(const Company& t) noexcept;
 
 		Vector<Pair<Company, size_t>> Lookup() const noexcept;
 
