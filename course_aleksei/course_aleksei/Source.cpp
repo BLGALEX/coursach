@@ -7,15 +7,14 @@
 
 int main() {
 	Customer test;
-	
 	while (true) {
-		Aleksei::RBTree tree;
+		Aleksei::RBTree HT;
 		for (int i = 0; i < 1000; i++) {
 			test.SetCompanyName(std::to_string(i));
 			test.SetName(std::to_string(i));
 			test.SetService(std::to_string(i));
 			test.SetVolume(i);
-			tree.Insert(test);
+			HT.Insert(test);
 		}
 
 		for (int i = 0; i < 10; i++) {
@@ -23,10 +22,10 @@ int main() {
 			test.SetName(std::to_string(i));
 			test.SetService(std::to_string(i));
 			test.SetVolume(i);
-			tree.Remove(test.GetName());
+			HT.Remove(test.GetName());
 		}
+
 	}
-
-
+	
 	return 0;
 }

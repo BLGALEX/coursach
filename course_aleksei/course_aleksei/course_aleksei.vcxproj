@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="aleksei\Company.cpp" />
     <ClCompile Include="aleksei\Customer.cpp" />
+    <ClCompile Include="aleksei\ForwardList.cpp" />
     <ClCompile Include="aleksei\HashTable.cpp" />
     <ClCompile Include="aleksei\RBTree.cpp" />
     <ClCompile Include="Source.cpp" />
@@ -148,9 +149,9 @@
   <ItemGroup>
     <ClInclude Include="aleksei\Company.h" />
     <ClInclude Include="aleksei\Customer.h" />
+    <ClInclude Include="aleksei\ForwardList.h" />
     <ClInclude Include="aleksei\HashTable.h" />
     <ClInclude Include="aleksei\RBTree.h" />
-    <ClInclude Include="helper\List.h" />
     <ClInclude Include="helper\Pair.h" />
     <ClInclude Include="helper\Vector.h" />
   </ItemGroup>

@@ -28,6 +28,9 @@
     <ClCompile Include="aleksei\HashTable.cpp">
       <Filter>aleksei</Filter>
     </ClCompile>
+    <ClCompile Include="aleksei\ForwardList.cpp">
+      <Filter>aleksei</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="aleksei\Company.h">
@@ -42,14 +45,14 @@
     <ClInclude Include="aleksei\RBTree.h">
       <Filter>aleksei</Filter>
     </ClInclude>
-    <ClInclude Include="helper\List.h">
-      <Filter>helper</Filter>
-    </ClInclude>
     <ClInclude Include="helper\Pair.h">
       <Filter>helper</Filter>
     </ClInclude>
     <ClInclude Include="helper\Vector.h">
       <Filter>helper</Filter>
+    </ClInclude>
+    <ClInclude Include="aleksei\ForwardList.h">
+      <Filter>aleksei</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
